@@ -49,7 +49,7 @@ router.post('/', (req, res) => {
 
   //check req body
   if ( !title || !year || !system ) { 
-    return newError( 406, 'Missing Title, Year, and/or System!', res );
+    return newError( 422, 'Missing Title, Year, and/or System!', res );
   }
   Games
   .insert(newTitle)
